@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>date?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+	<!-- Normalize & H5BP CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/h5bp.css">
+    
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
+    <!-- Google Font: Lato -->
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <!-- Our CSS file -->
+    <link rel="stylesheet/less" href="css/main.less">
+    <!--<link rel="stylesheet" href="index.css">-->
+   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Bootstrap Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <!-- Parse Javascript Library -->
+    <script type="text/javascript" src="https://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+    
+    <!-- LESS Compiler and Modernizr -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+    
+<body class="dt">
+    <!-- The following snippet of code will give the basic version of the SDK where the 
+     options are set to their most common defaults. You should insert it directly 
+     after the opening <body> tag on each page you want to load it -->
+    <script>
+      // Initialize Parse
+      Parse.initialize("q46GGBIFXMFTwkTFjjvDNT26Zc8d21jVwQehkeKv", "WAQ3OTvsP6Ka7bx00sM7JhgiENyU0izNVftDJOJD");
+
+      window.fbAsyncInit = function() {
+        Parse.FacebookUtils.init({ // this line replaces FB.init({
+          appId      : '457428537742584', // Facebook App ID
+          status     : true,  // check Facebook Login status
+          cookie     : true,  // enable cookies to allow Parse to access the session
+          xfbml      : true,  // initialize Facebook social plugins on the page
+          version    : 'v2.2' // point to the latest Facebook Graph API version
+        });
+
+        // Run code after the Facebook SDK is loaded.
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <!-- ========================================================================= -->
+    <!-- =================                                    ==================== -->
+    <!-- =================             ACTUAL HTML            ==================== -->
+    <!-- =================                                    ==================== -->
+    <!-- ========================================================================= -->
+    
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dt-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="date.png" width="240" height="63" alt="Date Logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="dt-navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="browse.html">Date</a></li>
+            <li><a href="createDate.html">Create</a></li>
+            <li><a href="chat.html">Chat</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+			    
+    
+    <div id="landingWrapper">
+        <h1 id="landingBanner">Goodbye Chat. Hello Dinner.</h1>
+        <p id="landingText" class="lead">
+            Unlike other dating apps full of mindless chat that never leads to actual dates, we make the date the most important part! Browse through cool and exciting dates near you &ndash; when you find one you like, simply let the other person know you are interested. If they are interested too, you are about to have a great time! It's safe, it's fun, it's an actual date!
+        </p>
+        <button type="button" id="loginbtn" class="btn btn-primary btn-lg btn-block">
+            <p id="getStartedMainText">Login with Facebook Now and Get Started</p>
+            <p id="getStartedSubText">We never post or share your info!</p>
+        </button>
+        <div id="fbWrapper">
+            <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Our JS files -->
+    <script src="profile.js"></script>
+    <script src="DateInfo.js"></script>
+    <script src="browseDate.js"></script>
+    <script src="misc.js"></script>
+    <script src="parseUtils.js"></script>
+    <script src="facebook-user-login.js"></script>
+    
+</body>
+</html>

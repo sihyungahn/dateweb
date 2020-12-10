@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+	<!-- Normalize CSS -->
+
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
+    <!-- Our CSS file -->
+
+	<link rel="stylesheet" href="css/main.less">
+
+    <link rel="stylesheet" href="css/main.less">
+    
+    <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Bootstrap Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <!-- Parse Javascript Library -->
+    <script type="text/javascript" src="https://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+    
+    <!-- LESS Compiler and Modernizr -->
+
+	<script src="less.js" type="text/javascript"></script>
+	<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="less.js" type="text/javascript"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+<body>
+    <!-- The following snippet of code will give the basic version of the SDK where the 
+     options are set to their most common defaults. You should insert it directly 
+     after the opening <body> tag on each page you want to load it -->
+    
+    <script>
+      // Initialize Parse
+      Parse.initialize("q46GGBIFXMFTwkTFjjvDNT26Zc8d21jVwQehkeKv", "WAQ3OTvsP6Ka7bx00sM7JhgiENyU0izNVftDJOJD");
+
+      window.fbAsyncInit = function() {
+        Parse.FacebookUtils.init({ // this line replaces FB.init({
+          appId      : '457428537742584', // Facebook App ID
+          status     : true,  // check Facebook Login status
+          cookie     : true,  // enable cookies to allow Parse to access the session
+          xfbml      : true,  // initialize Facebook social plugins on the page
+          version    : 'v2.2' // point to the latest Facebook Graph API version
+        });
+
+        // Run code after the Facebook SDK is loaded.
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+	
+    <!-- Header Nav -->
+    <nav class="navbar navbar-default navbar-custom">
+	    <div class="container-fluid">
+		    <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dt-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+				</button>
+			    <a class="navbar-brand" href="#">Date</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="dt-navbar-collapse">
+			    <ul class="nav navbar-nav navbar-right">
+				    <li><a href="/create.html">Create</a></li>
+				    <li class="active"><a href="/browse.html">Browse <span class="sr-only">(current)</span></a></li>
+				    <li><a href="/chat.html">Chat</a></li>
+				    <li><a href="/profile.html">Profile</a></li>
+			    </ul>
+		    </div>
+	    </div>
+    </nav>
+    
+    <div id="browseFilters">
+	    <form class="form-inline">
+			<div class="form-group">
+			    <label for="distancePref">Distance</label>
+			    <input type="text" class="form-control" id="distancePref" name="timePref"> <span>miles</span>
+			    <label for="timePref">Date/Time</label>
+			    <input type="datetime" id="timePref" name="timePref">
+				<label for="categoryPref">Category</label>
+				<select class="form-control">
+					<option value="event">Event</option>
+					<option value="fooddrink">Food/Drink</option>
+					<option value="museum">Museum</option>
+					<option value="sightseeing">Sightseeing</option>
+					<option value="outdoor">Outdoor</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+	    </form>
+    </div>
+    
+    <div id="dateResults">
+    
+	    <!-- Date Listings -->
+	    <div id="listings">
+			<div class="row">
+				<article class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="images/Unknown.jpeg" alt="">
+						<div class="caption">
+							<h3>{Date Title}</h3>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						</div>
+						<div class="map"></div>
+						<div class="in-button"><button type="button" class="btn btn-primary btn-lg btn-block">Check It Out</button></div>
+					</div>
+				</article>
+				<article class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="images/Unknown.jpeg" alt="">
+						<div class="caption">
+							<h3>{Date Title}</h3>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						</div>
+						<div class="map"></div>
+						<div class="in-button"><button type="button" class="btn btn-primary btn-lg btn-block">Check It Out</button></div>
+					</div>
+				</article>
+				<article class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="images/Unknown.jpeg" alt="">
+						<div class="caption">
+							<h3>{Date Title}</h3>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						</div>
+						<div class="map"></div>
+						<div class="in-button"><button type="button" class="btn btn-primary btn-lg btn-block">Check It Out</button></div>
+					</div>
+				</article>
+			</div>
+	    </div>
+	    
+	    <!-- Date Detail -->
+	    <div id="detail" class="hidden">
+		    <div class="row">
+			    <div id="profile" class="col-md-6">
+				    <img src="images/shaun.jpg" class="img-responsive" alt="">
+				    <h3 class="fname">Shaun</h3>
+				    <p class="age">22</p>
+				    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			    </div>
+				<div id="date-detail" class="col-md-6">
+					<img src="images/Unknown.jpeg" class="img-responsive" alt="">
+					<h3 class="date-title">{Date Title}</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    <button type="button" class="btn btn-primary btn-lg btn-block">I&rsquo;m in!</button>
+				</div>
+		    </div>
+	    </div>
+	
+    </div><!-- end of results -->
+	
+	<nav id="footer" class="row">
+		<a href="/contact.html">Contact Us</a>
+	</nav>
+		
+    
+	    
+    <!-- Our JS files -->
+    <script src="profile.js"></script>
+    <script src="DateInfo.js"></script>
+    <script src="browseDate.js"></script>
+    <script src="misc.js"></script>
+    <script src="parseUtils.js"></script>
+    <script src="facebook-user-login.js"></script>
+    
+</body>
+</html>

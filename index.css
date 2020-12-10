@@ -1,0 +1,64 @@
+body{
+    background: url("http://1.bp.blogspot.com/-XRGaNGrhhqw/UDwiy2tQViI/AAAAAAAAJMA/fGk2Djqn6sk/s1600/DSC_0926.jpg");
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-custom{
+    font-size: 30px;
+    //font-weight: bold;
+    //background-color: rgba(0,0,0,.4);
+    background-color: transparent;
+    border-style: none;
+    color: #FFF;
+    overflow: hidden;
+    padding: .5em;
+    //min-height: 300px;
+}
+
+
+
+.navbar-brand img {
+    background-color: rgba(0,0,0,.5);
+}
+
+.navbar-custom a {
+	color: #FFF;
+}
+
+#landingWrapper{
+    display: inline-block;
+    max-width: 700px;
+    background-color: rgba(255,255,255,.5);
+    padding: 30px 100px;
+    border-radius: 5px;
+    border-color: #ddd;
+    border-style: solid;
+}
+
+#landingBanner{
+    color: #f22;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#landingText{
+    font-size: 21px;
+}
+
+#loginbtn{
+    display: inline-block;
+    background-color: #449;
+    color: white;
+    width: 500px;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 23px;
+    border-radius: 5px;
+    background: linear-gradient(rgba(0,0,0,0) 30%, rgba(0,0,0,.2)) top no-repeat #449;
+    cursor: pointer;
+}
+
+#getStartedSubText{
+    font-size: 15px;
+}

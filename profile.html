@@ -1,0 +1,124 @@
+<html>
+<head>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <!-- Parse Javascript Library -->
+    <script type="text/javascript" src="https://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+    
+    <!-- Our CSS file -->
+    <link rel="stylesheet" href="profile.css">
+    
+    <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    
+    
+</head>
+<body>
+    <!-- The following snippet of code will give the basic version of the SDK where the 
+     options are set to their most common defaults. You should insert it directly 
+     after the opening <body> tag on each page you want to load it -->
+    <script>
+      // Initialize Parse
+      Parse.initialize("q46GGBIFXMFTwkTFjjvDNT26Zc8d21jVwQehkeKv", "WAQ3OTvsP6Ka7bx00sM7JhgiENyU0izNVftDJOJD");
+        
+    </script>
+    
+    <!-- ========================================================================= -->
+    <!-- =================                                    ==================== -->
+    <!-- =================             ACTUAL HTML            ==================== -->
+    <!-- =================                                    ==================== -->
+    <!-- ========================================================================= -->
+    
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="date.png" width="240" height="63" alt="Date Logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="browse.html">Date</a></li>
+            <li><a href="createDate.html">Create</a></li>
+            <li><a href="chat.html">Chat</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div id="profileWrapper">
+        <div id="profileImgWrapper">
+            <img id="profileImg" src="">
+        </div>
+        <div id="profileTitle">
+            <div id="profileFirstName">Name</div>
+            <div id="profileTitleComma">, </div>
+            <input type="text" class="form-control" id="profileAge" placeholder="age">
+            <div id="profileGender">Gender</div>
+        </div>
+        
+        <div id="profileDescription" contenteditable="true"></div>
+        
+        <div class="profileHorizontalBreak"></div>
+        
+        <div id="profileFilterWrapper">
+            <div class="profileFilterName">Interested In</div>
+            <div class="profileFilterActual">
+                <div class="profileFilterInterestedIn btn-default" id="orientationPrefMale" onclick="saveUserGenderPrefMale()">Male</div>
+                <div class="profileFilterInterestedIn btn-default" id="orientationPrefFemale" onclick="saveUserGenderPrefFemale()">Female</div>
+                <div class="profileFilterInterestedIn btn-default" id="orientationPrefOther" onclick="saveUserGenderPrefOther()">Other</div>
+            </div>
+            <div class="profileFilterSpacer"></div>
+            
+            <div class="profileFilterName">Between the Ages</div>
+            <div class="profileFilterActual">
+                <input id="profileFilterMinAge" class="form-control" placeholder="18" type="text">
+                <div id="profileFilterAgeAnd">And</div>
+                <input id="profileFilterMaxAge" class="form-control" placeholder="25" type="text">
+            </div>
+            <div class="profileFilterSpacer"></div>
+            
+            <div class="profileFilterName">Within</div>
+            <div class="profileFilterActual">
+                <input id="profileFilterDistance" class="form-control" placeholder="15" type="text">
+                <div id="profileFilterDistLabel">Miles</div>
+            </div>
+            <div class="profileFilterSpacer"></div>
+        </div>
+        
+        <div class="profileHorizontalBreak"></div>
+        
+        <div class="btn btn-primary btn-lg" onclick="saveUserDetails()">Save Preferences</div>
+        
+        <div id="updateProfileMessage">Saved, now go check out some dates!</div>
+    </div>
+    
+    
+    <!-- Our JS files -->
+    <script src="profile.js"></script>
+    <script src="createDate.js"></script>
+    <script src="browseDate.js"></script>
+    <script src="misc.js"></script>
+    <script src="parseUtils.js"></script>
+    <script src="facebook-user-login.js"></script>
+    
+    <script>
+        getUserDetails();
+    </script>
+    
+</body>
+</html>

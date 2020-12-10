@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background: url("http://1.bp.blogspot.com/-XRGaNGrhhqw/UDwiy2tQViI/AAAAAAAAJMA/fGk2Djqn6sk/s1600/DSC_0926.jpg");
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-custom{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+
+#createDate{
+    width: 600px;
+    height: 815px;
+    display: inline-block;
+    background-color: rgba(255,255,255,.8);
+    padding: 40px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ddd;
+    font-weight: bold;
+}
+
+#createDateHeader{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#map-container {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+}
+
+#map-canvas {
+    height: 300px;
+    width:  500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#desc-paragraph {
+    margin-top: 325px;
+}

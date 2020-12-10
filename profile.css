@@ -1,0 +1,124 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: url("http://1.bp.blogspot.com/-XRGaNGrhhqw/UDwiy2tQViI/AAAAAAAAJMA/fGk2Djqn6sk/s1600/DSC_0926.jpg");
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-custom{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+
+#profileWrapper{
+    width: 350px;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#profileImgWrapper{
+    
+}
+
+#profileImg{
+    width: 300px;
+}
+
+#profileTitle{
+    width: 100%;
+    display: inline-block;
+}
+
+#profileFirstName{
+    font-size: 32px;
+    float: left;
+}
+
+#profileAge{
+    font-size: 18px;
+    float: left;
+    margin-left: 13px;
+    display: inline-block;
+    width: 55px;
+    margin-top: 7px;
+}
+
+#profileGender{
+    float: right;
+    font-size: 18px;
+    margin-top: 11px;
+}
+
+#profileDescription{
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: left;
+    padding: 4px;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.profileFilterName{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profileFilterActual{
+    text-align: center;
+}
+
+.profileFilterInterestedIn{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#profileFilterMinAge{
+    width: 60px;
+    display: inline-block;
+}
+
+#profileFilterAgeAnd{
+    display: inline-block;
+}
+
+#profileFilterMaxAge{
+    width: 60px;
+    display: inline-block;
+}
+
+#profileFilterDistance{
+    display: inline-block;
+    width: 60px;
+}
+
+#profileFilterDistLabel{
+    display: inline-block;
+}
+
+.profileHorizontalBreak{
+    height: 15px;
+    width: 100%;
+}
+
+#updateProfileMessage{
+    font-weight: bold;
+}
+
+#fbWrapper{
+    padding: 10px;
+    display: inline-block;
+}

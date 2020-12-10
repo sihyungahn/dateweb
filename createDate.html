@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
+
+        <script type="text/javascript" src="https://www.parsecdn.com/js/parse-1.3.5.js"></script>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSUePcmFpi7VdwNfaFXkNc0zo2hO9N9Mk&libraries=places,geometry">
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
+
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.6.2/jquery.timepicker.css" />
+
+        <link rel="stylesheet" href="createDate.css">
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.6.2/jquery.timepicker.js">
+        </script>
+        <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+    <script>
+      Parse.initialize("q46GGBIFXMFTwkTFjjvDNT26Zc8d21jVwQehkeKv", "WAQ3OTvsP6Ka7bx00sM7JhgiENyU0izNVftDJOJD");
+    </script>
+
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="date.png" width="240" height="63" alt="Date Logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="browse.html">Date</a></li>
+            <li><a href="createDate.html">Create</a></li>
+            <li><a href="chat.html">Chat</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+
+    <form id="createDate">
+        <div id="form-container">
+            <div id="createDateHeader">Create a Date</div>
+            <p>
+                Headline: <input type="text" id="title" />
+            </p>
+            <p>
+                Date: <input type="text" id="datepicker" />
+                Time: <input type="text" id="timepicker" placeholder="12:00" />
+            </p>
+            <p>
+                Place: <input type="text" id="locationName" placeholder="Starbucks">
+                Purpose: <select id="catbox" name="category">
+                    <option value="cafe">Coffee</option>
+                    <option value="food">Food</option>
+                    <option value="stadium|amusement_park">Event</option>
+                    <option value="museum">Museum</option>
+                </select>
+            </p>
+            <div id="map-container"><div id="map-canvas"></div></div>
+            <p id="desc-paragraph">
+                Enter a short description of your plans (max 300 characters)...<br/>
+                <textarea id="description" rows="10" cols="60" maxlength="300" placeholder="Let's get coffee and people-watch!"></textarea>
+            </p>
+            <p>
+                Blind date? <input type="checkbox" name="blind" id="blind" />
+                <input type="button" id="submit" value="Submit"/>
+            </p>
+        </div>
+    </form>
+
+    <div id="map-container"><div id="map-canvas"></div></div>
+
+    <script src="createDate.js"></script>
+    </body>
+</html>
